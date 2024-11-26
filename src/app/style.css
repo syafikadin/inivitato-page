@@ -1,0 +1,77 @@
+.wedding-announcement{
+    font-size: 14px;
+    font-family: 'poppins', serif;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 2px;
+}
+
+.wedding-announcement-mobile{
+  margin-top: 80px;
+  margin-bottom: 8px;
+}
+
+.wedding-title{
+  font-size: 63px;
+  font-family: var(--font-butler), sans-serif;
+  font-weight: 300;
+}
+
+.wedding-title-2{
+  font-size: 31.5px;
+  font-family: var(--font-butler), sans-serif;
+  font-weight: 300;
+}
+
+.wedding-title-second{
+  margin-top: -16px;
+}
+
+.wedding-description{
+  font-size: 14px;
+  font-family: 'newsreader', serif;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.timetoshare{
+  font-size: 31.5px;
+  font-family: 'newsreader', serif;
+  font-weight: 300;
+  line-height: 37.8px;
+}
+
+.text-animated{
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(3rem);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+
+.btn-up-down{
+  animation: bounce 4s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.btn-light{
+  font-family: 'newsreader', serif;
+  font-style: italic;
+}
