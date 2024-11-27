@@ -1,6 +1,32 @@
-import React from "react";
+"use client";
+
+import React, { useState, useRef } from "react";
 
 export default function Home() {
+
+  const [isMusic, setIsMusic] = useState(false);
+  const [isPlayed, setIsPlayed] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handlePlayAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsMusic(true);
+      setIsPlayed(true)
+    }
+  };
+
+  const handlePauseAudio = () => {
+    if (audioRef.current) {
+      if (isMusic) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsMusic(!isMusic);
+    }
+  };
+
   return (
     <div className="container-fluid vh-100 d-flex flex-column flex-lg-row p-0">
       {/* Bagian Kiri */}
@@ -24,6 +50,14 @@ export default function Home() {
             — Sapardi Djoko Damono
           </p>
         </div>
+        {isPlayed && (
+          <button
+            className="btn btn-sm btn-light position-absolute bottom-0 start-0 m-3"
+            onClick={handlePauseAudio}
+          >
+            Music
+          </button>
+        )}
       </div>
 
       {/* Bagian Kanan */}
@@ -41,10 +75,12 @@ export default function Home() {
           <div className="d-flex flex-column justify-content-center align-items-center h-100">
             <h2 className="text-uppercase wedding-title-2">Tiffany & Jared</h2>
             <h2 className="fst-italic timetoshare">#TImetoshaRE</h2>
-            <button className="btn btn-light mt-2 px-5 py-1 btn-up-down">Open</button>
+            <button className="btn btn-light mt-2 px-5 py-1 btn-up-down"
+              onClick={handlePlayAudio}>Open</button>
           </div>
         </div>
       </div>
+      <audio ref={audioRef} src="/music/Bernadya.mp3" preload="auto" />
     </div>
   );
 }
