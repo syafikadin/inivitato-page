@@ -29,6 +29,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap"
           rel="stylesheet" />
 
+        {/* Icon */}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
       </head>
       <body className={`${butler.variable}`}>
         {children}

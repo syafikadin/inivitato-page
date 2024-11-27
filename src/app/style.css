@@ -75,3 +75,46 @@
   font-family: 'newsreader', serif;
   font-style: italic;
 }
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.dear-text{
+  font-size: 12px;
+  font-family: 'poppins', serif;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 2px;
+}
+
+.dear-text:nth-of-type(2){
+  margin-top: -10px;
+}
+
+.welcome-text{
+  font-size: 32px;
+  font-family: var(--font-butler), sans-serif;
+  font-weight: 500;
+  line-height: 38.4px;
+}
+
+.caption-text{
+  font-size: 18px;
+  font-family: 'newsreader', serif;
+  font-weight: 400;
+  line-height: 27px;
+  font-style: italic;
+  padding: 0px 10% 24px;
+}
+
+.btn-arrow{
+  width: 60px;
+}
