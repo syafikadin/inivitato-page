@@ -118,3 +118,14 @@
 .btn-arrow{
   width: 60px;
 }
+
+img {
+  transition: opacity 1s ease-in-out;
+}
+
+.button-scroll{
+  font-size: 12.25px;
+  font-family: 'poppins', serif;
+  font-weight: 700;
+  line-height: 14.7px;
+}
